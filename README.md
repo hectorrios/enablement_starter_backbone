@@ -20,3 +20,13 @@ For reference, the syntax for an Handlebars template script tag is:
 
 </script>
 ~~~~
+
+An example of fetching a Handlebars template, compiling, and
+merging with a model is:
+
+~~~~
+var source = $('#todoItemTemplate').html();
+var template = Handlebars.compile(source);
+var html = template(this.model.toJSON());
+~~~~
+
