@@ -21,6 +21,11 @@ var Vehicles = Backbone.Collection.extend({
 var VehicleView = Backbone.View.extend({
 
     tagName: 'li',
+
+    /*
+    The "attributes" property can also accept a function that returns an
+    Object with the properties that should be added to the top-level EL tag
+     */
     attributes: function () {
         return {
             "data-color": this.model.get('color')
@@ -32,18 +37,12 @@ var VehicleView = Backbone.View.extend({
     },
 
     initialize: function () {
+        /*
+        Removing a Model from the collection not only fires the "remove" event on the collection
+        but also fires it on the Model that is removed as well. Therefore, we can listen for the
+        "remove" here on the VehicleView
+         */
         this.model.on('remove', this.remove, this);
-
-
-        if (this.model) {
-            // debugger;
-            console.log('Inside the initialize function of VehicleView');
-
-            this.attributes["data-color"] = this.model.get('color');
-        } else {
-            console.log('Initialize if stmt was skipped');
-
-        }
     },
 
     template: (function () {
