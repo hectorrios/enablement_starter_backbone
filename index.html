@@ -14,10 +14,18 @@
         <script src="js/lib/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+
         <script src="js/lib/jquery-min.js"></script>
         <script src="js/lib/underscore-min.js"></script>
         <script src="js/lib/backbone-min.js"></script>
         <script src="js/lib/handlebars-v4.0.5.js"></script>
+
+        <script id="todo-item-template" type="text/x-handlebars-template">
+            <h3 class="content {{ status }}">
+                <input type=checkbox
+                       {{#if statusComplete}} checked {{/if}} /> {{ description }} <a href="/#todos/{{ id }}">☞</a>
+            </h3>
+        </script>
 
         <script src="js/main.js"></script>
 

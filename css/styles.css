@@ -17,7 +17,7 @@ ol, ul {
 }
 
 html {
-    background: #e4b897 url('/images/bg-body.jpg') repeat;
+    background: #e4b897 url('../images/bg-body.jpg') repeat;
     font-size: 16px;
     height: 100%;
     text-rendering: optimizeLegibility;
@@ -41,11 +41,11 @@ body {
 }
 
 #app {
-    background: url('/images/bg-content.png') repeat;
+    background: url('../images/bg-content.png') repeat;
 }
 
 h1 {
-    background: url('/images/bg-todo.png') 48px 0 repeat-y;
+    background: url('../images/bg-todo.png') 48px 0 repeat-y;
     font: bold 4em/80px "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0 20px 0 70px;
     text-align: right;
@@ -53,7 +53,7 @@ h1 {
 }
 
 h3 {
-    background: url('/images/bg-todo.png') 48px 0 repeat-y;
+    background: url('../images/bg-todo.png') 48px 0 repeat-y;
     font: normal 1.8em/38px "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 2px 80px 0 70px;
     position: relative;
